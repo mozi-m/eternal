@@ -16,8 +16,8 @@ from datetime import date
 
 DATABASE_HOST = '127.0.0.1'
 DATABASE_USER = 'root'
-DATABASE_PASS = 'eternal'
-DATABASE_TABLE = 'yummy'
+DATABASE_PASS = 'mogumogu'
+DATABASE_TABLE = 'eternal'
 
 clients_list = {}
 db_sw = 0

@@ -1,3 +1,7 @@
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'mogumogu';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
 CREATE DATABASE eternal;
 USE eternal;
 
